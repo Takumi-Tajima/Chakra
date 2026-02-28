@@ -1,15 +1,16 @@
 import { HStack, Button } from '@chakra-ui/react'
-import './App.css'
-import { Provider } from './components/ui/provider'
+import { ChakraProvider } from '@chakra-ui/react'
+import theme from './thema/thema'
 
 function App() {
 
   return (
-    <Provider>
+    <ChakraProvider value={theme}>
       <HStack>
-        <Button>Click me</Button>
+        <Button colorPalette="red" size={"xl"}>Click me</Button>
+        <h1>Hello, World!</h1>
       </HStack>
-    </Provider>
+    </ChakraProvider>
   )
 }
 
