@@ -1,10 +1,12 @@
 import { memo } from "react"
 import { Outlet } from "react-router-dom"
 
+import { Header } from "../organisms/layout/Header"
+
 export const Home = memo(() => {
   return (
     <>
-      <h1>homeの共通レイアウトです</h1>
+      < Header />
       < Outlet />
     </>
   )
