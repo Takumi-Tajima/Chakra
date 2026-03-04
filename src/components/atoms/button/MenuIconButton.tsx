@@ -6,7 +6,7 @@ type Props = IconButtonProps & { ref?: Ref<HTMLButtonElement> }
 
 export const MenuIconButton = ({ ref, ...props }: Props) => {
   return (
-    <IconButton ref={ref} aria-label="Menu" display={{base: 'flex', md: 'none'}} {...props}>
+    <IconButton ref={ref} aria-label="Menu" variant="ghost" display={{base: 'flex', md: 'none'}} {...props}>
       <GiHamburgerMenu />
     </IconButton>
   )
