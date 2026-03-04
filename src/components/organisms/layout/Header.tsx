@@ -1,5 +1,5 @@
-import { Box, Flex, Heading, Link, IconButton, Drawer } from "@chakra-ui/react"
-import { GiHamburgerMenu } from "react-icons/gi";
+import { MenuIconButton } from "@/components/atoms/button/MenuIconButton"
+import { Box, Flex, Heading, Link, Drawer } from "@chakra-ui/react"
 
 export const Header = () => {
   return (
@@ -14,9 +14,7 @@ export const Header = () => {
         </Box>
       </Flex>
       <Drawer.Trigger asChild>
-        <IconButton aria-label="Menu" display={{base: 'flex', md: 'none'}}>
-          <GiHamburgerMenu />
-        </IconButton>
+        <MenuIconButton />
       </Drawer.Trigger>
     </Flex>
     <Drawer.Backdrop />
@@ -25,6 +23,7 @@ export const Header = () => {
         <Drawer.CloseTrigger />
         <Drawer.Header>
           <Drawer.Title>メニュー</Drawer.Title>
+          <Drawer.Title>neko</Drawer.Title>
         </Drawer.Header>
         <Drawer.Body />
         <Drawer.Footer />
