@@ -1,4 +1,5 @@
 // import { HStack, Button } from '@chakra-ui/react'
+import { Toaster } from "@/components/ui/toaster"
 import { ChakraProvider } from '@chakra-ui/react'
 import { BrowserRouter } from 'react-router-dom'
 
@@ -10,6 +11,7 @@ function App() {
   return (
     <ChakraProvider value={theme}>
       <BrowserRouter>
+        <Toaster />
         <Router />
       </BrowserRouter>
     </ChakraProvider>
