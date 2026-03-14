@@ -1,7 +1,7 @@
 import { Wrap, WrapItem, Spinner, VStack, Text } from "@chakra-ui/react"
 import { memo, useEffect } from "react"
 
-import { UserCard } from "../organisms/user/UserCard"
+import { UserDialog } from "../organisms/user/UserDialog"
 import { useAllUsers } from "../../hooks/useAllUsers"
 
 export const UserManagement = memo(() => {
@@ -22,7 +22,7 @@ export const UserManagement = memo(() => {
         <Wrap gap={4} mt={4} p={{base: 4, md: 10}}>
           {users?.map(user => (
             <WrapItem key={user.id}>
-              <UserCard imageUrl="https://picsum.photos/800/600" userName={user.username} fullName={user.name}/>
+              <UserDialog imageUrl={`https://i.pravatar.cc/150?img=${user.id}`} userName={user.username} fullName={user.name}/>
             </WrapItem>
           ))}
         </Wrap>

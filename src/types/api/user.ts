@@ -21,3 +21,9 @@ export type User = {
     bs: string;
   };
 };
+
+export type UserInfo = {
+  imageUrl: string
+  userName: string
+  fullName: string
+}
