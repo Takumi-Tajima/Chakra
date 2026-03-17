@@ -3,6 +3,7 @@ import { memo, useEffect } from "react"
 
 import { UserDialog } from "../organisms/user/UserDialog"
 import { useAllUsers } from "../../hooks/useAllUsers"
+import { useLoginUser } from "../../hooks/useLoginUser"
 
 export const UserManagement = memo(() => {
   const { getUsers, loading, users } = useAllUsers()
@@ -10,6 +11,9 @@ export const UserManagement = memo(() => {
   useEffect(() => {
     getUsers()
   }, [])
+
+  const { LoginUser } = useLoginUser()
+  console.log(LoginUser)
 
   return (
     <>

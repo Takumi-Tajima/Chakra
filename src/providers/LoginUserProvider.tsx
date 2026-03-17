@@ -4,7 +4,7 @@ import type { User } from '../types/api/user';
 
 export type LoginUserContextType = {
   LoginUser: User | null
-  setLoginUser: (user: User) => void
+  setLoginUser: (user: User & { isAdmin: boolean }) => void
 }
 
 export const LoginUserContext = createContext<LoginUserContextType | undefined>(undefined);
