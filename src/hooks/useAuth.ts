@@ -4,8 +4,10 @@ import { useState } from "react"
 
 import type { User } from "@/types/api/user"
 import { useMessage } from "./useMessage"
+import { useLoginUser } from "./useLoginUser"
 
 export const useAuth = () => {
+  const { setLoginUser } = useLoginUser()
   const navigate = useNavigate()
   const { showMessage } = useMessage()
   const [loading, setLoading] = useState(false)
@@ -13,6 +15,7 @@ export const useAuth = () => {
     setLoading(true)
     axios.get<User>(`https://jsonplaceholder.typicode.com/users/${id}`).then((res) => {
       if(res.data) {
+        setLoginUser(res.data)
         showMessage({
           title: "ログイン成功",
           type: "success"

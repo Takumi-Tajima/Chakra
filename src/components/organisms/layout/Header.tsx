@@ -1,5 +1,6 @@
 import { MenuIconButton } from "@/components/atoms/button/MenuIconButton"
-import { Box, Flex, Heading, Link, Drawer } from "@chakra-ui/react"
+import { Box, Flex, Heading, Drawer } from "@chakra-ui/react"
+import { Link } from "react-router-dom"
 import { DrawerMenu } from "./DrawerMenu"
 
 export const Header = () => {
@@ -11,10 +12,10 @@ export const Header = () => {
       </Flex>
       <Flex align='center' fontSize='sm' flexGrow={2} display={{base: 'none', md: 'flex'}}>
         <Box pr={4}>
-          <Link href='/home/user_management'>ユーザー一覧</Link>
+          <Link to='/home/user_management'>ユーザー一覧</Link>
         </Box>
         <Box pr={4}>
-          <Link href='/home/setting'>設定</Link>
+          <Link to='/home/setting'>設定</Link>
         </Box>
       </Flex>
       <Drawer.Trigger asChild>
